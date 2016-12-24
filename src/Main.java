@@ -12,21 +12,18 @@ public class Main {
         temp1[5]=10.0d;
         temp1[6]=8.0d;
 
-        /* Going over all temperatures in the array above */
+        /* Going over all temperatures in the array above
+         * And finding avg temperature of the array */
 
         System.out.println("List of temperatures in the past 7 days (Array):");
-        for (int i = 0; i < 7; i++) {
-            System.out.println(temp1[i]);
-        }
-
-        /* Find avg temperature of the array */
         double totalArray=0.0d;
-        int counter = 0;
-        for (int i = 0; i < 7; i++) {
-            totalArray+=temp1[i];
-            counter+=1;
+        int index=1;
+        for (double temp : temp1) {
+            System.out.println("Temperature of " + "day " + index + " is " + temp);
+            totalArray+=temp;
+            index++;
         }
-        System.out.println("The average temperature of the list above is = " + (totalArray / counter));
+        System.out.println("The average temperature of the list above is = " + (totalArray / temp1.length));
 
         /* Create ArrayList and assign temperatures to it */
         ArrayList<Double> temp2 = new ArrayList<Double>();
@@ -38,16 +35,17 @@ public class Main {
         temp2.add(10.0d);
         temp2.add(8.0d);
 
-        /* Going over all temperatures in the ArrayList above */
-        System.out.println("List of temperatures in the past 7 days (Array):");
-        for (int i = 0; i < temp2.size(); i++) {
-            System.out.println(temp2.get(i));
-        }
-
+        /* Going over all temperatures in the ArrayList above
+        * And calculating average*/
         double totalList=0.0d;
-        for (int i = 0; i < temp2.size(); i++) {
-            totalList+=temp2.get(i);
+        System.out.println("\nList of temperatures in the past 7 days (ArrayList):");
+        index=1;
+        for (double temp : temp2){
+            System.out.println("Temperature of " + "day " + index + " is " + temp);
+            totalList+=temp;
+            index++;
         }
-        System.out.println("The average temperature of the list above is = " + (totalList / temp2.size()));
+        System.out.println("The average temperature of the ArrayList above is = " + (totalList / temp2.size()));
+
     }
 }
