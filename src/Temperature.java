@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Main {
+public class Temperature {
 
     public static void main(String[] args) {
         double[] temp1 = new double[7];
